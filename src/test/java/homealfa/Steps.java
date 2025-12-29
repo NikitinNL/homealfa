@@ -1,10 +1,7 @@
 package homealfa;
 
-import com.codeborne.selenide.Selenide;
-import com.codeborne.selenide.logevents.SelenideLogger;
 import homealfa.utils.RandomUtils;
 import io.qameta.allure.*;
-import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -32,7 +29,7 @@ public class Steps extends TestBase{
 
 
     void Steps () {
- //       SelenideLogger.addListener("allure", new AllureSelenide());  // Детализированные шаги в аллюр отчете
+
         step("Открыть страницу", ()-> {
             stepsOptions
                     .openPage();  // открыли страницу и проверили наличие текста на стрнице
@@ -78,7 +75,6 @@ public class Steps extends TestBase{
     @DisplayName("Проверка отдельных модулей")
     public void testAnnotatedSteps() {
 
- //       SelenideLogger.addListener("allure", new AllureSelenide());  // Детализированные шаги в аллюр отчете
         WebSteps steps = new WebSteps();
 
         steps.openPage();

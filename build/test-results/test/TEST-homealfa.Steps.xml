@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="homealfa.Steps" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-12-29T07:06:32.986Z" hostname="KOMPUTER" time="55.195">
+<testsuite name="homealfa.Steps" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-12-29T14:19:27.582Z" hostname="KOMPUTER" time="43.25">
   <properties/>
-  <testcase name="Проверка отдельных модулей" classname="homealfa.Steps" time="55.195"/>
+  <testcase name="Проверка отдельных модулей" classname="homealfa.Steps" time="43.25"/>
   <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[дек. 29, 2025 10:06:36 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+  <system-err><![CDATA[дек. 29, 2025 5:19:30 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 143
-дек. 29, 2025 10:06:36 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+дек. 29, 2025 5:19:30 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 WARNING: Unable to find version of CDP to use for 143.0.7499.109. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.24.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 ]]></system-err>
 </testsuite>

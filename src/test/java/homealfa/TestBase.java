@@ -38,8 +38,8 @@ public class TestBase {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());   // Детализированные шаги в аллюр отчете
     }
 
-    @AfterEach   // вызываем функции Attachments:
-    void addAttachments() {
+    @AfterEach
+    void addAttachments() {              // вызываем функции Attachments:
         Attach.screenshotAs("Last screenshot");   // скриншот
         Attach.pageSource();            // код страницы
         Attach.browserConsoleLogs();   // Логи
