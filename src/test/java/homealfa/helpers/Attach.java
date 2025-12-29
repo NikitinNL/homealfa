@@ -13,12 +13,12 @@ import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 import static org.openqa.selenium.logging.LogType.BROWSER;
 
 public class Attach {
-    @Attachment(value = "{attachName}", type = "image/png")
+    @Attachment(value = "{attachName}", type = "image/png")                 // Скриншот
     public static byte[] screenshotAs(String attachName) {
         return ((TakesScreenshot) getWebDriver()).getScreenshotAs(OutputType.BYTES);
     }
 
-    @Attachment(value = "Page source", type = "text/plain")
+    @Attachment(value = "Page source", type = "text/plain")                 // pageSource страница
     public static byte[] pageSource() {
         return getWebDriver().getPageSource().getBytes(StandardCharsets.UTF_8);
     }
@@ -28,6 +28,7 @@ public class Attach {
         return message;
     }
 
+    // Логи консоли
     public static void browserConsoleLogs() {
         attachAsText(
                 "Browser console logs",
@@ -35,15 +36,15 @@ public class Attach {
         );
     }
 
-    @Attachment(value = "Video", type = "text/html", fileExtension = ".html")
+    @Attachment(value = "Video", type = "text/html", fileExtension = ".html")     // Видео
     public static String addVideo() {
         return "<html><body><video width='100%' height='100%' controls autoplay><source src='"
                 + getVideoUrl()
                 + "' type='video/mp4'></video></body></html>";
     }
 
-    public static URL getVideoUrl() {
-        String videoUrl = "https://selenoid.autotests.cloud/video/" + sessionId() + ".mp4";
+    public static URL getVideoUrl() {   // отвечает за формирование ссылки где буде видео
+        String videoUrl = "https://selenoid.autotests.cloud/video/" + sessionId() + ".mp4";   // сслка где хранится видео с индивиуальным id
 //        System.out.println(sessionId());
         try {
             return new URL(videoUrl);

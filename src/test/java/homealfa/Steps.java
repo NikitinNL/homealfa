@@ -32,7 +32,7 @@ public class Steps extends TestBase{
 
 
     void Steps () {
-        SelenideLogger.addListener("allure", new AllureSelenide());  // Детализированные шаги в аллюр отчете
+ //       SelenideLogger.addListener("allure", new AllureSelenide());  // Детализированные шаги в аллюр отчете
         step("Открыть страницу", ()-> {
             stepsOptions
                     .openPage();  // открыли страницу и проверили наличие текста на стрнице
@@ -78,7 +78,7 @@ public class Steps extends TestBase{
     @DisplayName("Проверка отдельных модулей")
     public void testAnnotatedSteps() {
 
-        SelenideLogger.addListener("allure", new AllureSelenide());  // Детализированные шаги в аллюр отчете
+ //       SelenideLogger.addListener("allure", new AllureSelenide());  // Детализированные шаги в аллюр отчете
         WebSteps steps = new WebSteps();
 
         steps.openPage();
